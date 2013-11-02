@@ -1,0 +1,58 @@
+Please note that the language definition was ripped and slightly modified from the
+reddit dailyprogrammer assembly challenge at:
+http://www.reddit.com/r/dailyprogrammer/comments/1kqxz9/080813_challenge_132_intermediate_tiny_assembler/
+
+This language is not case sen
+
+
+[a] indicates values that are stored in RW memory at address a
+_b_ indicates values that are stored in programming memory. _5_ is the equivalent of the number 5
+
+AND a b
+    Value configurations:
+        [][]
+        []__
+
+    Explanation:
+        M[a] = M[a] and M[b]
+        M[a] = M[a] and M_b_
+
+
+OR a b
+    Value configurations
+        [][]
+        []__
+    Explanation
+        M[a] = M[a] or M[b]
+        M[a] = M[a] or M_b_
+
+...
+##Todo Add documentation for xor, not, mov
+...
+
+RANDOM a
+    Value configurations
+        []
+    Explanation:
+        Store a random integer value between 0 and 256 at M[a]
+        M[a] = random(0,256)
+
+...
+##Todo Add documentation for add, sub
+...
+
+JMP x
+    Value configurations:
+    []
+    __
+    Explanation:
+        Jump to code line number x. Code line number counting  starts at 1.
+
+JZ x a
+    Value configs:
+        [][]
+        []__
+        __[]
+        ____
+    Explanation:
+        Jump to code line number x if M[a] == 0.
