@@ -23,5 +23,11 @@ class CheapALU():
     def eq(self, x, y):
         return x == y
 
+    def lt(self, x, y):
+        return x < y
+
+    def gt(self, x, y):
+        return x > y
+
     def __init__(self):
         return None
