@@ -1,8 +1,6 @@
-mov [0] 4
-jz [0] [10]
-mov [0] 8
-jmp 6
-mov [0] 5
-add [0] 10
-dprint [0]
+mov [0] 96
+mov [1] 122
+add [0] 1
+aprint [0]
+jls 3 [0] [1]
 halt
