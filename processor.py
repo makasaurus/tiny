@@ -427,7 +427,7 @@ class Processor:
             self.instruction_debug("dprint")
             self.pc+=1
             target=self.rwMemory.read(self.pMemory.read(self.pc))
-            print "%s"%(chr(target))
+            print "%s"%(target)
 
         elif instruction == 0xff:
             #halt
